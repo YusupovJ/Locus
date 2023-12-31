@@ -1,0 +1,19 @@
+@function em($num, $currentFontSize: 16) {
+    $result: calc($num / $currentFontSize);
+    @return $result + em;
+}
+
+@function rem($num, $currentFontSize: 16) {
+    $result: calc($num / $currentFontSize);
+    @return $result + rem;
+}
+
+@function per($num, $parent) {
+    $result: calc($num / $parent * 100%);
+    @return $result;
+}
+
+@function part($num, $currentFontSize: 16) {
+    $result: calc($num / $currentFontSize);
+    @return $result;
+}

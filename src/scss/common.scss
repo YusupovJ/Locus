@@ -1,0 +1,56 @@
+.title {
+	font-weight: 800;
+	@include adaptivProperty(70, 30, font-size);
+	line-height: part(105, 70);
+	color: #1c2323;
+}
+
+/*==============================================================================================*/
+
+.btn {
+	background-color: #58a9a5;
+	transition: background-color 0.3s ease 0s;
+	padding: em(15, 25) em(60, 25);
+	font-size: rem(18);
+	color: #fff;
+	p {
+		line-height: part(37, 25);
+		color: #fff;
+	}
+	&:hover {
+		background-color: #2b8a85;
+	}
+}
+
+/*==============================================================================================*/
+
+.top-title {
+	&__body {
+		text-align: center;
+		margin: 0px auto;
+	}
+	&__text {
+		margin: 0px 0px em(20, 30) 0px;
+		@include adaptivProperty(30, 20, font-size);
+		line-height: part(45, 30);
+		color: #404242;
+	}
+}
+
+/*==============================================================================================*/
+
+.dekor {
+	&::after,
+	&::before {
+		width: 135px;
+		background-color: #58a9a5;
+		height: 5px;
+		display: inline-block;
+		bottom: 0;
+		content: "";
+		position: absolute;
+	}
+	&::before {
+		bottom: 15px;
+	}
+}

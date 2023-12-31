@@ -1,0 +1,5 @@
+@mixin adaptivProperty($pcSize, $mobSize, $property) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $wrapperSize - 320;
+    #{$property}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
